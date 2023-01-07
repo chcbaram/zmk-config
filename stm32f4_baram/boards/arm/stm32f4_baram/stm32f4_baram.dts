@@ -8,6 +8,9 @@
 #include <st/f4/stm32f411Xe.dtsi>
 #include <st/f4/stm32f411c(c-e)ux-pinctrl.dtsi>
 #include <dt-bindings/zmk/matrix_transform.h>
+#include <dt-bindings/led/led.h>
+#include <dt-bindings/zmk/backlight.h>
+
 
 / {
 	model = "STM32F4_BARAM Board";
@@ -18,8 +21,8 @@
 		//zephyr,console = &cdc_acm_uart;
 		zephyr,sram = &sram0;
 		zephyr,flash = &flash0;
-
 		zmk,kscan = &kscan;
+    zmk,backlight = &backlight;
 	};
 
 
@@ -32,18 +35,15 @@
 			;
 	};
 
-	leds {
+	backlight: leds {
 		compatible = "gpio-leds";
-		blue_led_0: led_0 {
-			gpios = <&gpioc 13 GPIO_ACTIVE_HIGH>;	//C13
+		led_0 {
+			gpios = <&gpioc 13 GPIO_ACTIVE_LOW>;	
 			label = "User LED";
 		};
 	};
-
-	aliases {
-		led0 = &blue_led_0;
-	};
 };
+
 
 
 &flash0 {
