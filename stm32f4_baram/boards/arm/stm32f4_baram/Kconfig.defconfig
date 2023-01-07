@@ -6,7 +6,7 @@
 if BOARD_STM32F4_BARAM
 
 config ZMK_KEYBOARD_NAME
-	default "STM32F4_BARAM"
+	default "BARAM_F411_KB"
 
 config ZMK_USB
 	default y
