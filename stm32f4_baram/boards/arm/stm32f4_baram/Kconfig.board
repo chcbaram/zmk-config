@@ -1,0 +1,8 @@
+# Copyright (c) 2020 Brian Bradley
+# SPDX-License-Identifier: Apache-2.0
+
+# STM32F411CE based Black Pill V2.0+ board configuration
+
+config BOARD_STM32F4_BARAM
+	bool "STM32F4_BARAM Board"
+	depends on SOC_STM32F411XE

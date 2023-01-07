@@ -1,0 +1,17 @@
+# Copyright (c) 2021 Pete Johanson
+# SPDX-License-Identifier: Apache-2.0
+
+# F411CE based Black Pill V2.0+ board board configuration
+
+if BOARD_STM32F4_BARAM
+
+config ZMK_KEYBOARD_NAME
+	default "STM32F4_BARAM"
+
+config ZMK_USB
+	default y
+
+config ZMK_KSCAN_MATRIX_POLLING
+    default y
+    
+endif # BOARD_STM32F4_BARAM

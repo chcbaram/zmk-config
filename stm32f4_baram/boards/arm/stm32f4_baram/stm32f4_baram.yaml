@@ -1,0 +1,21 @@
+identifier: stm32f4_baram
+name: STM32F411 Board
+type: mcu
+arch: arm
+toolchain:
+  - zephyr
+  - gnuarmemb
+  - xtools
+ram: 128
+flash: 1024
+supported:
+  - can
+  - pwm
+  - counter
+  - usb
+  - gpio
+  - i2c
+  - spi
+  - kscan
+  - can
+  - usb_device
